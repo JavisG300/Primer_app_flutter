@@ -14,9 +14,9 @@ class CardImageProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final card = Container(
-      height: 230.0,
-      width: 361.0,
-      margin: EdgeInsets.only(top: 35.0, left: 10.0, right: 10.0),
+      height: 330.0,
+      //width: 361.0,
+      margin: EdgeInsets.only(top: 45.0, left: 15.0, right: 15.0),
       decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
@@ -34,13 +34,13 @@ class CardImageProfile extends StatelessWidget {
 
     final title_place = Container(
       margin: EdgeInsets.only(
-          top: 10.0,
-          left: 20.0,
-          right: 20.0), //EdgeInsets permite generar un margen especifico
+          top: 15.0,
+          left: 5.0
+          ), //EdgeInsets permite generar un margen especifico
       child: Text(
         namePlace,
         style: TextStyle(
-            fontSize: 20.0, fontWeight: FontWeight.w900, fontFamily: "Lato"),
+            fontSize: 30.0, fontWeight: FontWeight.w900, fontFamily: "Lato"),
         textAlign: TextAlign.left,
       ),
     );
@@ -52,7 +52,7 @@ class CardImageProfile extends StatelessWidget {
             right: 5.0), //EdgeInsets permite generar un margen especifico
         child: Text(
           descriptionPlace,
-          style: TextStyle(fontSize: 17.0, fontFamily: "Lato"),
+          style: TextStyle(fontSize: 24.0, fontFamily: "Lato"),
           textAlign: TextAlign.left,
         ));
     final stepsP = Container(
@@ -63,7 +63,7 @@ class CardImageProfile extends StatelessWidget {
         child: Text(
           steps,
           style: TextStyle(
-              fontSize: 17.0,
+              fontSize: 24.0,
               fontFamily: "Lato",
               color: Colors.amber,
               fontWeight: FontWeight.w900),
@@ -71,15 +71,15 @@ class CardImageProfile extends StatelessWidget {
         ));
 
     final description = Container(
-        height: 140.0,
-        width: 280.0,
+        height: 180.0,
+        width: 380.0,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
             color: Colors.white),
-        child: Column(children: [title_place, description_place, stepsP]));
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start,children: [title_place, description_place, stepsP]));
 
     final cardImageProfile =
-        Stack(alignment: Alignment(0.0, 1.2), children: [card, description]);
+        Stack(alignment: Alignment(0.1, 1.2), children: [card, description]);
 
     return Stack(
         alignment: Alignment(0.7, 1.2),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/pltazi_trips_cupertino.dart';
 import 'platzi_trips.dart';
 import 'pltazi_trips_cupertino.dart';
 
