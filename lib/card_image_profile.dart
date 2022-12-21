@@ -35,13 +35,13 @@ class CardImageProfile extends StatelessWidget {
     final title_place = Container(
       margin: EdgeInsets.only(
           top: 15.0,
-          left: 5.0
+          left: 5.0, right: 5.0
           ), //EdgeInsets permite generar un margen especifico
       child: Text(
         namePlace,
         style: TextStyle(
             fontSize: 30.0, fontWeight: FontWeight.w900, fontFamily: "Lato"),
-        textAlign: TextAlign.left,
+        
       ),
     );
 
@@ -53,7 +53,6 @@ class CardImageProfile extends StatelessWidget {
         child: Text(
           descriptionPlace,
           style: TextStyle(fontSize: 24.0, fontFamily: "Lato"),
-          textAlign: TextAlign.left,
         ));
     final stepsP = Container(
         margin: EdgeInsets.only(
@@ -67,12 +66,12 @@ class CardImageProfile extends StatelessWidget {
               fontFamily: "Lato",
               color: Colors.amber,
               fontWeight: FontWeight.w900),
-          textAlign: TextAlign.left,
         ));
 
     final description = Container(
-        height: 180.0,
-        width: 380.0,
+        height: 170.0,
+        margin: EdgeInsets.only(left: 20.0, right: 20.0),
+        //width: 380.0,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
             color: Colors.white),
